@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+ application:
+  user: node
+  build: .
+  env_file:
+    - .env
+  volumes:
+    - ./:/home/node/app
+  ports:
+    - '3000:3000'
+    - '5555:5555'
+  entrypoint: "sh ./.docker/entrypoint.sh"
+ database:
+   image: postgres
+   ports:
+     - "5432:5432"
+   environment:
+     - POSTGRES_PASSWORD=postgres
+     - POSTGRES_USER=postgres
+     - POSTGRES_DB=postgres
