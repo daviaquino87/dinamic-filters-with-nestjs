@@ -31,10 +31,6 @@ cp ./.env.example ./.env
 docker-compose up -d 
 ```
 
-## 📖 Documentação da api
-
-[Documentação](http://localhost:3000/api)
-
 ## 👨🏼‍💻 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
